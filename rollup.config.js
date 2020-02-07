@@ -5,6 +5,8 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 
+import copy from 'rollup-plugin-copy';
+
 import rollup_start_dev from './rollup_start_dev';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -18,6 +20,9 @@ export default {
 		file: 'public/bundle.js'
 	},
 	plugins: [
+		copy({
+		  targets: [{ src: 'public/*', dest: 'docs' }]
+		}),
 		svelte({
 			preprocess: sveltePreprocess({ postcss: true }),
 			// enable run-time checks when not in production
