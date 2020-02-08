@@ -20,6 +20,12 @@ export default {
 		file: 'public/bundle.js'
 	},
 	plugins: [
+
+		copy({
+		  targets: [{ src: 'public/*', dest: 'docs' }],
+		  hook: 'writeBundle'
+		}),
+
 		svelte({
 			preprocess: sveltePreprocess({ postcss: true }),
 			// enable run-time checks when not in production
@@ -53,11 +59,8 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser(),
-
-		copy({
-		  targets: [{ src: 'public/*', dest: 'docs' }]
-		})
+		production && terser()
+		
 	],
 	watch: {
 		clearScreen: false

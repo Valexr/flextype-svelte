@@ -6,7 +6,7 @@
 
 <style type="text/scss">
 	h1 {
-		span {color: red; font-weight: 900; @apply uppercase;
+		span {color: red; font-weight: 700; @apply uppercase;
 		}
 		@apply bg-black text-white leading-loose text-center;
 	}
