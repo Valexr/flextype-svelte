@@ -1,12 +1,13 @@
 <script>
 	import Tailwindcss from './Tailwindcss.svelte';
 
-	export let name;
+	let name = 'Flextype';
 </script>
 
 <style type="text/scss">
 	h1 {
-		span {color: red; font-weight: 900;}
+		span {color: red; font-weight: 900; @apply uppercase;
+		}
 		@apply bg-black text-white leading-loose text-center;
 	}
 	
