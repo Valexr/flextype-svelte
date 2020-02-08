@@ -20,9 +20,6 @@ export default {
 		file: 'public/bundle.js'
 	},
 	plugins: [
-		copy({
-		  targets: [{ src: 'public/*', dest: 'docs' }]
-		}),
 		svelte({
 			preprocess: sveltePreprocess({ postcss: true }),
 			// enable run-time checks when not in production
@@ -45,6 +42,10 @@ export default {
 			dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
 		}),
 		commonjs(),
+
+		copy({
+		  targets: [{ src: 'public/*', dest: 'docs' }]
+		}),
 
 		// In dev mode, call `npm run start:dev` once
 		// the bundle has been generated
