@@ -4,12 +4,13 @@
 	export let name;
 </script>
 
-<style>
+<style type="text/scss">
 	h1 {
-		/*@apply bg-black text-white;*/
+		span {color: red; font-weight: 900;}
+		@apply bg-black text-white leading-loose text-center text-2xl;
 	}
 	
 </style>
 
 <Tailwindcss />
-<h1 class="bg-black text-white">Hello {name}!</h1>
+<h1 class="">Hello <span>{name}</span>!</h1>

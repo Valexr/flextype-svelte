@@ -346,6 +346,7 @@ var app = (function () {
     	let t0;
     	let h1;
     	let t1;
+    	let span;
     	let t2;
     	let t3;
     	let current;
@@ -357,10 +358,13 @@ var app = (function () {
     			t0 = space();
     			h1 = element("h1");
     			t1 = text("Hello ");
+    			span = element("span");
     			t2 = text(ctx.name);
     			t3 = text("!");
-    			attr_dev(h1, "class", "bg-black text-white svelte-t1i89w");
-    			add_location(h1, file, 14, 0, 474);
+    			attr_dev(span, "class", "svelte-7to824");
+    			add_location(span, file, 21, 19, 355);
+    			attr_dev(h1, "class", " svelte-7to824");
+    			add_location(h1, file, 21, 0, 336);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -370,7 +374,8 @@ var app = (function () {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, h1, anchor);
     			append_dev(h1, t1);
-    			append_dev(h1, t2);
+    			append_dev(h1, span);
+    			append_dev(span, t2);
     			append_dev(h1, t3);
     			current = true;
     		},
