@@ -5,7 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 
-import copy from 'rollup-plugin-copy';
+// import copy from 'rollup-plugin-copy';
 
 import rollup_start_dev from './rollup_start_dev';
 
@@ -21,10 +21,10 @@ export default {
 	},
 	plugins: [
 
-		copy({
-		  targets: [{ src: ['public/bundle.css', 'public/bundle.js', 'public/favicon.png', 'public/global.css', 'public/index.html'], dest: 'docs' }],
-		  hook: 'writeBundle'
-		}),
+		// copy({
+		//   targets: [{ src: ['public/bundle.css', 'public/bundle.js', 'public/favicon.png', 'public/global.css', 'public/index.html'], dest: 'docs' }],
+		//   hook: 'writeBundle'
+		// }),
 
 		svelte({
 			preprocess: sveltePreprocess({ postcss: true }),

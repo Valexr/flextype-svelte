@@ -15,13 +15,14 @@
     "svelte": "^3.0.0",
     "svelte-preprocess": "^3.2.6",
     "tailwindcss": "^1.2.0",
-    "sass": "^1.25.0"
+    "sass": "^1.25.0",
+    "cpx": "^1.5.0"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && cpx 'public/**/*.{html,css,js,ico}' docs ",
     "dev": "rollup -c -w",
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev"
