@@ -43,10 +43,6 @@ export default {
 		}),
 		commonjs(),
 
-		copy({
-		  targets: [{ src: 'public/*', dest: 'docs' }]
-		}),
-
 		// In dev mode, call `npm run start:dev` once
 		// the bundle has been generated
 		!production && rollup_start_dev,
@@ -57,7 +53,11 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+		copy({
+		  targets: [{ src: 'public/*', dest: 'docs' }]
+		})
 	],
 	watch: {
 		clearScreen: false
