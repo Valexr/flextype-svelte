@@ -1,7 +1,7 @@
 <script>
 	import Tailwindcss from './Tailwindcss.svelte';
 
-	let name = 'Flextype';
+	let name = 'Flextype Svelte';
 </script>
 
 <style type="text/scss">
