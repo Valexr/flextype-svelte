@@ -22,7 +22,7 @@
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
-    "build": "rollup -c && cpx 'public/**/*.{html,css,js,ico}' docs",
+    "build": "rollup -c && cpx 'public/**/*.{html,css,js,png}' docs",
     "dev": "rollup -c -w",
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev"
