@@ -22,7 +22,7 @@ export default {
 	plugins: [
 
 		copy({
-		  targets: [{ src: 'public/*', dest: 'docs' }],
+		  targets: [{ src: ['public/bundle.css', 'public/bundle.js', 'public/favicon.png', 'public/global.css', 'public/index.html'], dest: 'docs' }],
 		  hook: 'writeBundle'
 		}),
 
@@ -60,7 +60,7 @@ export default {
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
 		production && terser()
-		
+
 	],
 	watch: {
 		clearScreen: false
