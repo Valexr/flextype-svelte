@@ -2,8 +2,8 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../App.svelte",
-    "../Tailwindcss.svelte"
+    "../src/App.svelte",
+    "../src/Tailwindcss.svelte"
   ],
   "sourcesContent": [
     "<script>\n\timport Tailwindcss from './Tailwindcss.svelte';\n\n\texport let name;\n</script>\n\n<style>h1 {\n  /*@apply bg-black text-white;*/\n}\n\t\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9BcHAuc3ZlbHRlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNDO0VBQ0MsOEJBQThCO0FBQy9CIiwiZmlsZSI6InNyYy9BcHAuc3ZlbHRlIiwic291cmNlc0NvbnRlbnQiOlsiXG5cdGgxIHtcblx0XHQvKkBhcHBseSBiZy1ibGFjayB0ZXh0LXdoaXRlOyovXG5cdH1cblx0XG4iXX0= */</style>\n\n<Tailwindcss />\n<h1 class=\"bg-black text-white\">Hello {name}!</h1>\n",
