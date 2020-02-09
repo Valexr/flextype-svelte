@@ -12,8 +12,7 @@
 			color: theme('colors.red.600');
 		}
 	}
-	
 </style>
 
 <Tailwindcss />
-<h1>Hello <span>{name}</span><strong class="text-yellow-600">!</strong></h1>
+<h1>Hello <span>{name}</span><strong class="text-yellow-500">!</strong></h1>

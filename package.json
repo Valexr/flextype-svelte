@@ -26,7 +26,6 @@
   "scripts": {
     "build": "rollup -c && cpx 'public/**/*.{html,css,js,png}' docs",
     "dev": "rollup -c -w",
-    "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev"
+    "start": "sirv public --single"
   }
 }
