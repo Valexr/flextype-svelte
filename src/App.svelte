@@ -72,7 +72,7 @@
 <nav class="nav-main">
 	{#each navItems as navItem, i}
 		<a href="{ navItem.href }" alt="{navItem.name}" class="nav-item text-gray-100 hover:text-gray-600 {navItem.class}" data-tooltip="{ navItem.name }">
-	  		<Icon data={ navItem.icon } scale={ navItem.scale }/>
+	  		<Icon data={ navItem.icon } class="fill-current" scale={ navItem.scale }/>
 	  	</a>
   	{/each}
 </nav>
