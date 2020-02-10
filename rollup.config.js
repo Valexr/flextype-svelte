@@ -49,7 +49,7 @@ export default {
 
 		// In dev mode, call `npm run start:dev` once
 		// the bundle has been generated
-		!production && rollup_start_dev,
+		// !production && rollup_start_dev,
 		!production && serve(),
 
 		// Watch the `public` directory and refresh the

@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "flextype-svelte",
   "version": "1.0.0",
   "repository": "https://github.com/Valexr/flextype-svelte",
   "license": "MIT",
@@ -21,7 +21,11 @@
     "tailwindcss": "^1.2.0"
   },
   "dependencies": {
-    "sirv-cli": "^0.4.4"
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "sirv-cli": "^0.4.4",
+    "svelte-awesome": "^2.2.1"
   },
   "scripts": {
     "build": "rollup -c && cpx 'public/**/*.{html,css,js,png}' docs",
