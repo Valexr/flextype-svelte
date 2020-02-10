@@ -28,7 +28,7 @@
     "svelte-awesome": "^2.2.1"
   },
   "scripts": {
-    "build": "rollup -c && cpx 'public/**/*.{html,css,js,png}' docs",
+    "build": "rollup -c && cpx 'public/**/*.{html,css,js,png,svg}' docs",
     "dev": "rollup -c -w",
     "start": "sirv public --single"
   }
