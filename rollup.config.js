@@ -7,8 +7,6 @@ import sveltePreprocess from 'svelte-preprocess';
 
 // import copy from 'rollup-plugin-copy';
 
-// import rollup_start_dev from './rollup_start_dev';
-
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
