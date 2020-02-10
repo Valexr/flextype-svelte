@@ -54,7 +54,7 @@
 			    transition: opacity .2s,transform .2s;
 				@apply absolute opacity-0 w-auto py-2 px-4 text-gray-800 bg-gray-200 text-sm rounded-sm shadow-xl;
 			}
-			&:hover {
+			&:hover, &:focus {
 				&:after {
 					opacity: 1;
 					transform: translate(.2rem,50%);
@@ -71,7 +71,7 @@
 
 <nav class="nav-main">
 	{#each navItems as navItem, i}
-		<a href="{ navItem.href }" alt="{navItem.name}" class="nav-item text-gray-100 hover:text-gray-600 {navItem.class}" data-tooltip="{ navItem.name }">
+		<a href="{ navItem.href }" alt="{navItem.name}" class="nav-item text-gray-100 hover:text-gray-600 { navItem.class }" data-tooltip="{ navItem.name }">
 	  		<Icon data={ navItem.icon } class="fill-current" scale={ navItem.scale }/>
 	  	</a>
   	{/each}
