@@ -45,7 +45,7 @@
 			color: theme('colors.red.600');
 		}
 	}
-	.nav-main {@apply bg-gray-900 inline-flex h-full flex-col items-center content-center inset-x-0 bottom-0}
+	.nav-main {@apply bg-gray-900 inline-flex overflow-auto h-full flex-col items-center content-center inset-x-0 bottom-0}
 	a {
 		&.nav-item {@apply relative cursor-pointer w-12 h-12 p-3 flex justify-center items-center no-underline;
 			&:after {
