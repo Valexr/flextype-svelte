@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
+import buble from 'rollup-plugin-buble';
 
 // import copy from 'rollup-plugin-copy';
 
@@ -58,6 +59,7 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
+		buble(),
 		production && terser()
 
 	],
