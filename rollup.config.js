@@ -21,7 +21,7 @@ export default {
 	plugins: [
 
 		copy({
-		  targets: [{ src: 'public/*', dest: 'docs' }],
+		  targets: [{ src: ['public/images', 'public/bundle.css', 'public/bundle.js', 'public/favicon.png', 'public/global.css', 'public/index.html'], dest: 'docs' }],
 		  hook: 'writeBundle'
 		}),
 

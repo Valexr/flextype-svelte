@@ -45,14 +45,14 @@
 			color: theme('colors.red.600');
 		}
 	}
-	.nav-main {@apply bg-gray-900 inline-flex h-full flex-col items-center content-center inset-x-0 bottom-0;
+	.nav-main {@apply bg-gray-900 items-center content-center inset-x-0 bottom-0;
 		.nav-item {overflow: hidden;
 			@apply relative cursor-pointer w-12 h-12 p-3 flex justify-center items-center no-underline;
 			&:after {
 				content: attr(data-tooltip);
 				left: 100%;
 				transform: translate(-.2rem,0%);
-				-webkit-transform: translate(-.2rem,0%);
+				// -webkit-transform: translate(-.2rem,0%);
 			    transition: opacity .2s,transform .2s;
 				@apply absolute opacity-0 w-auto py-2 px-4 text-gray-800 bg-gray-200 text-sm rounded-sm shadow-xl;
 			}
@@ -60,7 +60,7 @@
 				&:after {
 					opacity: 1;
 					transform: translate(.2rem,0%);
-					-webkit-transform: translate(.2rem,0%);
+					// -webkit-transform: translate(.2rem,0%);
 					@apply flex; 
 				}
 			}
@@ -73,7 +73,7 @@
 
 <Tailwindcss />
 
-<nav class="nav-main">
+<nav class="nav-main flex sm:w-12 w-full sm:h-full h-12 sm:flex-col flex-row">
 	{#each navItems as navItem, i}
 		<a href="{ navItem.href }" alt="{navItem.name}" class="nav-item text-gray-100 hover:text-gray-600 { navItem.class }" data-tooltip="{ navItem.name }">
 	  		<Icon data={ navItem.icon } class="fill-current" scale={ navItem.scale }/>
