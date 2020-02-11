@@ -45,21 +45,22 @@
 			color: theme('colors.red.600');
 		}
 	}
-	.nav-main {@apply bg-gray-900 inline-flex h-full flex-col items-center content-center inset-x-0 bottom-0}
-	a {
-		&.nav-item {@apply relative cursor-pointer w-12 h-12 p-3 flex justify-center items-center no-underline;
+	.nav-main {@apply bg-gray-900 inline-flex h-full flex-col items-center content-center inset-x-0 bottom-0;
+		.nav-item {overflow: hidden;
+			@apply relative cursor-pointer w-12 h-12 p-3 flex justify-center items-center no-underline;
 			&:after {
 				content: attr(data-tooltip);
-				left: 100%; 
-				bottom: 50%;
-				transform: translate(-.2rem,50%);
+				left: 100%;
+				transform: translate(-.2rem,0%);
+				-webkit-transform: translate(-.2rem,0%);
 			    transition: opacity .2s,transform .2s;
 				@apply absolute opacity-0 w-auto py-2 px-4 text-gray-800 bg-gray-200 text-sm rounded-sm shadow-xl;
 			}
-			&:hover, &:focus {
+			&:hover, &:focus {overflow: visible;
 				&:after {
 					opacity: 1;
-					transform: translate(.2rem,50%);
+					transform: translate(.2rem,0%);
+					-webkit-transform: translate(.2rem,0%);
 					@apply flex; 
 				}
 			}
@@ -67,11 +68,8 @@
 			&.nav-user {@apply absolute inset-x-0 bottom-0}
 		}
 	}
+	
 </style>
-
-<svelte:head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0.0">
-</svelte:head>
 
 <Tailwindcss />
 

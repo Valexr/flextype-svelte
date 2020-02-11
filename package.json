@@ -30,7 +30,7 @@
     "sirv-cli": "^0.4.5"
   },
   "scripts": {
-    "build": "rollup -c && cpx 'public/**/*.*' docs",
+    "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --single"
   }
