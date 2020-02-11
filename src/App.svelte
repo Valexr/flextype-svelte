@@ -69,11 +69,15 @@
 	}
 </style>
 
+<svelte:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0.0">
+</svelte:head>
+
 <Tailwindcss />
 
 <nav class="nav-main">
 	{#each navItems as navItem, i}
-		<a onclick="void(0)" href="{ navItem.href }" alt="{navItem.name}" class="nav-item text-gray-100 hover:text-gray-600 { navItem.class }" data-tooltip="{ navItem.name }">
+		<a href="{ navItem.href }" alt="{navItem.name}" class="nav-item text-gray-100 hover:text-gray-600 { navItem.class }" data-tooltip="{ navItem.name }">
 	  		<Icon data={ navItem.icon } class="fill-current" scale={ navItem.scale }/>
 	  	</a>
   	{/each}
