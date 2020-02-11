@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import buble from '@rollup/plugin-buble';
 
-import copy from 'rollup-plugin-copy';
+// import copy from 'rollup-plugin-copy';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -20,10 +20,10 @@ export default {
 	},
 	plugins: [
 
-		copy({
-		  targets: [{ src: ['public/images', 'public/bundle.css', 'public/bundle.js', 'public/favicon.png', 'public/global.css', 'public/index.html'], dest: 'docs' }],
-		  hook: 'writeBundle'
-		}),
+		// copy({
+		//   targets: [{ src: ['public/images', 'public/bundle.css', 'public/bundle.js', 'public/favicon.png', 'public/global.css', 'public/index.html'], dest: 'docs' }],
+		//   hook: 'writeBundle'
+		// }),
 
 		svelte({
 			preprocess: sveltePreprocess({ postcss: true }),
