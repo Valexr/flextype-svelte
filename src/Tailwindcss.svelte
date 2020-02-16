@@ -12,7 +12,7 @@
 	  @apply text-lg;
 	}
 	a {
-	  @apply text-blue-600 underline;
+	  @apply text-blue-600;
 	}
 
 	@tailwind components;

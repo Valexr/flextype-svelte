@@ -4,9 +4,11 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
-import buble from '@rollup/plugin-buble';
 
-// import copy from 'rollup-plugin-copy';
+import copy from 'rollup-plugin-copy';
+// import inlineSvg from 'rollup-plugin-inline-svg';
+
+// import svgicons from 'rollup-plugin-svg-icons';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -16,14 +18,60 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/bundle.js'
+		file: 'public/bundle/bundle.js'
 	},
 	plugins: [
 
-		// copy({
-		//   targets: [{ src: ['public/images', 'public/bundle.css', 'public/bundle.js', 'public/favicon.png', 'public/global.css', 'public/index.html'], dest: 'docs' }],
-		//   hook: 'writeBundle'
-		// }),
+		copy({
+		  targets: [{ src: 'public/*', dest: 'docs' }],
+		  hook: 'writeBundle'
+		}),
+
+		// inlineSvg({
+	 //      // Removes specified tags and its children. You can specify tags by setting removingTags query array.
+	 //      // default: false
+	 //      removeTags: true,
+	  
+	 //      // warning: this won't work unless you specify removeTags: true
+	 //      // default: ['title', 'desc', 'defs', 'style']
+	 //      removingTags: ['title', 'desc', 'defs', 'style'],
+	     
+	 //      // warns about present tags, ex: ['desc', 'defs', 'style']
+	 //      // default: []
+	 //      warnTags: [], 
+	 
+	 //      // Removes `width` and `height` attributes from <svg>.
+	 //      // default: true
+	 //      removeSVGTagAttrs: true,
+	  
+	 //      // Removes attributes from inside the <svg>.
+	 //      // default: []
+	 //      removingTagAttrs: [],
+	  
+	 //      // Warns to console about attributes from inside the <svg>.
+	 //      // default: []
+	 //      warnTagAttrs: []
+	 //    }),
+
+	    // svgicons({
+	    //   // folder with svg-icons
+	    //   inputFolder: 'src/feather-icons',  // it is default value
+	 
+	    //   // path for the sprite file
+	    //   output: 'public/bundle.svg', // it is default value
+	 
+	    //   // Also you can use any Svgstore options: 
+	    //   // https://github.com/svgstore/svgstore#svgstore-options
+	    //   //
+	    //   // cleanDefs
+	    //   // cleanSymbols
+	    //   // svgAttrs: true,
+	    //   // symbolAttrs: true,
+	    //   // copyAttrs: true,
+	    //   // renameDefs
+	    //   // inline: true
+	 
+	    // }),
 
 		svelte({
 			preprocess: sveltePreprocess({ postcss: true }),
@@ -32,7 +80,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file — better for performance
 			css: css => {
-				css.write('public/bundle.css');
+				css.write('public/bundle/bundle.css');
 			},
 			// preprocess: autoPreprocess()
 		}),
@@ -59,7 +107,6 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		buble(),
 		production && terser()
 
 	],
