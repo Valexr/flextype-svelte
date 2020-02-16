@@ -29,7 +29,7 @@
 <nav class="nav {customClass}">
 	{#each navItems as navItem, i}
 		<a href="{ navItem.href }" alt="{navItem.name}" class="nav-item { navItem.class }" data-tooltip="{ navItem.name }">
-	  		<Icon data={ navItem.icon } class="" scale={ navItem.scale }/>
+	  		<Icon data={ navItem.icon } scale={ navItem.scale }/>
 	  	</a>
   	{/each}
 </nav>

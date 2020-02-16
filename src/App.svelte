@@ -2,11 +2,13 @@
 	import Tailwindcss from './Tailwindcss.svelte';
 	import { 
 		Header, 
-		Nav, 
+		// Nav, 
 		FlextypeSvg, 
 		Html5, 
 		Table
-		}  from './components';	
+	}  from './components';	
+	import Icon from 'svelte-awesome';
+	import Nav from "./components/Nav.svelte";
 </script>
 
 <Tailwindcss />
@@ -19,6 +21,8 @@
 
 		<main class="main">
 			<Table />
+
+			<Icon />
 
 			<FlextypeSvg size="180" />
 			<Html5 />
