@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'GoogleSans';
+	/*src: url('GoogleSans-Regular.eot');*/
+	src: local('GoogleSans'), local('GoogleSans-Regular'),
+		/*url('GoogleSans-Regular.eot?#iefix') format('embedded-opentype'),*/
+		/*url('GoogleSans-Regular.woff') format('woff'),*/
+		url('GoogleSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GoogleSans';
+	/*src: url('GoogleSans-Regular.eot');*/
+	src: local('GoogleSans'), local('GoogleSans-Medium'),
+		/*url('GoogleSans-Regular.eot?#iefix') format('embedded-opentype'),*/
+		/*url('GoogleSans-Regular.woff') format('woff'),*/
+		url('GoogleSans-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GoogleSans';
+	/*src: url('GoogleSans-Bold.eot');*/
+	src: local('GoogleSans Bold'), local('GoogleSans-Bold'),
+		/*url('GoogleSans-Bold.eot?#iefix') format('embedded-opentype'),*/
+		/*url('GoogleSans-Bold.woff') format('woff'),*/
+		url('GoogleSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
