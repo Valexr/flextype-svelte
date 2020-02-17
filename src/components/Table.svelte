@@ -49,7 +49,7 @@
             <td class="entry-menu">
                 <nav class="dropdown">
                 {#each dropdownMenuItems as dropdownMenuItem, i}
-                    <a class="dropdown-item" href="{ dropdownMenuItem.href }" onClick="" target="{ dropdownMenuItem.target }" data-tooltip="{ dropdownMenuItem.name }">
+                    <a class="dropdown-item px-2 sm:px-0" href="{ dropdownMenuItem.href }" onClick="" target="{ dropdownMenuItem.target }" data-tooltip="{ dropdownMenuItem.name }">
                         <Icon data={ dropdownMenuItem.icon } class="" scale="1" /><!-- { dropdownMenuItem.name } -->
                     </a>
                 {/each}
@@ -80,6 +80,7 @@
 </table>
 
 <style type="text/scss">
+    thead {@apply text-sm}
     .entry {@apply border h-12 px-4 py-2;
         &:hover {@apply bg-gray-200;
             .entry-menu {@apply opacity-100}
@@ -87,7 +88,7 @@
     }
     .entry-icon {@apply text-center w-12}
     .entry-name {
-        a {
+        a {@apply whitespace-no-wrap;
             @apply text-gray-800 px-4;
             &:hover {
                 @apply text-gray-500;
@@ -96,8 +97,7 @@
     }
     .entry-menu {@apply px-4 text-right w-64 opacity-0;
         .dropdown { @apply flex flex-row justify-between w-auto items-center content-center;
-            .dropdown-item {
-                @apply text-gray-500 relative overflow-hidden;
+            .dropdown-item { @apply text-gray-500 relative overflow-hidden;
                 &:after {
                     content: attr(data-tooltip);
                     left: -100%;
@@ -105,7 +105,7 @@
                     transform: translate(0%, .2rem);
                     transition: opacity .2s,transform .2s;
                     // transition-delay: 0.15s;
-                    @apply absolute opacity-0 w-auto py-2 px-4 text-gray-100 bg-gray-800 text-sm rounded-sm shadow-xl;
+                    @apply absolute opacity-0 w-auto py-1 px-2 text-gray-100 bg-gray-800 text-xs rounded-sm shadow-xl;
                 }
                 &:hover, &:focus {
                     @apply text-gray-800 overflow-visible;

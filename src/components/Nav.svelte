@@ -35,7 +35,8 @@
 </nav>
 
 <style type="text/scss">
-	.nav { @apply flex flex-col w-12 h-full bg-gray-900 items-center content-center inset-x-0 bottom-0;
+	.nav { @apply bg-gray-900;
+	 // flex flex-col w-12 h-full items-center content-center inset-x-0 bottom-0;
 		.nav-item {
 			overflow: hidden;
 			@apply relative cursor-pointer w-12 h-12 p-3 flex justify-center items-center no-underline text-gray-600;
@@ -46,7 +47,7 @@
 				transform: translate(-.2rem,0%);
 			    transition: opacity .2s,transform .2s;
 			    // transition-delay: 0.15s;
-				@apply absolute opacity-0 w-auto py-2 px-4 text-gray-100 bg-gray-800 text-xs rounded-sm shadow-xl;
+				@apply absolute opacity-0 w-auto py-2 px-4 text-gray-100 bg-gray-800 text-sm rounded-sm shadow-xl;
 			}
 			&:hover, &:focus {
 				overflow: visible;
