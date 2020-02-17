@@ -14,7 +14,7 @@
 	}
 
 	let navItems = [
-		{id: 0, class: 'nav-logo', name: 'Flextype', icon: flextype, scale: 2},
+		{id: 0, class: 'nav-logo', name: 'Flextype', icon: flextype, scale: 3},
 		{id: 1, class: 'active', name: 'Entries', icon: faDatabase},
 		{id: 2, class: '', name: 'Fieldsets', icon: faListAlt},
 		{id: 3, class: '', name: 'Themes', icon: faPalette},
@@ -46,7 +46,7 @@
 				transform: translate(-.2rem,0%);
 			    transition: opacity .2s,transform .2s;
 			    // transition-delay: 0.15s;
-				@apply absolute opacity-0 w-auto py-2 px-4 text-gray-800 bg-gray-200 text-sm rounded-sm shadow-xl;
+				@apply absolute opacity-0 w-auto py-2 px-4 text-gray-100 bg-gray-800 text-xs rounded-sm shadow-xl;
 			}
 			&:hover, &:focus {
 				overflow: visible;

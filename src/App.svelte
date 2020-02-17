@@ -7,6 +7,15 @@
 		FlextypeSvg,
 		Html5
 	} from './components';
+
+	import { onMount } from "svelte";
+
+    let entries;
+		onMount(async()=>{
+			const response = await fetch("https://docs.flextype.org/en/content/entries?format=json")
+			const todo = await response.json();
+			entries = todo
+		});
 </script>
 
 <Tailwindcss />
@@ -19,20 +28,23 @@
 
 		<main class="main">
 			<Table />
-			<FlextypeSvg size="180" />
-			<Html5 />
-			<svg
-				class="svg-ico"
-				width="24"
-				height="24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			>
+			<!-- <FlextypeSvg size="180" /> -->
+			<!-- <Html5 /> -->
+			<!-- <svg class="svg-ico">
 				<use xlink:href="feather-sprite.svg#activity" />
-			</svg>
+			</svg> -->
+			{#if entries}
+			<ul>
+				{#each entries as entry, i}
+					<li>
+						<h2>entry.on_this_page.title</h2>
+						<a href="entry.on_this_page.title" alt="entry.on_this_page.title">entry.on_this_page.link</a>
+					</li>
+				{/each}
+			</ul>
+			{:else}
+				<p>loading.....</p>
+			{/if}
 		</main>
 	</div>
 </div>
@@ -47,20 +59,13 @@
 			}
 		}
 	}
-	.svg-ico {
-		display: inline-block;
-		color: currentColor;
-		width: 24px;
-		height: 24px;
-		vertical-align: middle;
+	:global(.svg-ico) {
+		width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
 	}
-	// :global(.feather) {
-	//   /*width: 24px;*/
-	//   /*height: 24px;*/
-	//   stroke: currentColor;
-	//   stroke-width: 2;
-	//   stroke-linecap: round;
-	//   stroke-linejoin: round;
-	//   fill: none;
-	// }
 </style>

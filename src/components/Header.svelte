@@ -27,7 +27,7 @@
 			li { @apply flex-1;
 				a { @apply text-white cursor-pointer justify-center flex px-4 py-3;
 					&:hover { @apply bg-gray-700;}
-					&.active { @apply bg-gray-200 text-gray-900; }
+					&.active { @apply bg-gray-100 text-gray-900; }
 					&.disable { @apply text-gray-600 cursor-not-allowed; }
 				}
 			}
