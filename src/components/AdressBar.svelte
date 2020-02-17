@@ -8,10 +8,10 @@
 
 <style type="text/scss">
 	.adress-bar {
-		@apply flex items-center px-3 bg-gray-300;
+		@apply px-3 bg-gray-300;
 
 		.adress-bar-item {
-			@apply flex justify-center items-center px-3 h-12;
+			@apply inline-flex items-center px-3 h-12;
 		}
 	}
 </style>
