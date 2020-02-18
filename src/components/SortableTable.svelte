@@ -68,21 +68,22 @@
 </script>
 
 <style>
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  li {
-    border: 2px dotted transparent;
-    transition: border 0.1s linear;
-  }
   .over {
     border-color: rgba(48, 12, 200, 0.2);
   }
 </style>
 
 {#if list && list.length}
-  <table class="table table-auto">
+  <table class="table table-auto w-full">
+    <thead>
+        <tr>
+            <th class="px-4 py-2 text-gray-800">Icon</th>
+            <th class="px-4 py-2 text-gray-800 text-left">Name</th>
+            <th class="px-4 py-2 text-gray-800">Created</th>
+            <th class="px-4 py-2 text-gray-800">Updated</th>
+            <th class="px-4 py-2 text-gray-800">Menu</th>
+        </tr>
+    </thead>
     {#each list as item, index (getKey(item))}
       <tr
         class="border h-12"

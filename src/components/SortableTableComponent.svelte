@@ -1,5 +1,5 @@
 <script>
-import SortableList from './SortableTable.svelte';
+import SortableTable from './SortableTable.svelte';
 import Component from './ComponentTable.svelte';
 
 let list = [
@@ -10,7 +10,7 @@ let list = [
 const sortList = ev => {list = ev.detail};
 </script>
 
-<SortableList 
+<SortableTable 
     {list} 
     key="id" 
     on:sort={sortList}
@@ -18,4 +18,4 @@ const sortList = ev => {list = ev.detail};
 	let:index
 >
     <Component {item} {index}/>
-</SortableList>
+</SortableTable>

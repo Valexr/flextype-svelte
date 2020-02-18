@@ -3,7 +3,7 @@
 </script>
 
 <nav class="adress-bar">
-	<a class="adress-bar-item" href="#">Entries</a> / <a class="adress-bar-item" href="#">Entry</a>
+	<a class="adress-bar-item" href="">Entries</a> / <a class="adress-bar-item" href="#">Entry</a>
 </nav>
 
 <style type="text/scss">

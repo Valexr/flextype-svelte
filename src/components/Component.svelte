@@ -12,6 +12,6 @@
 	}
 </style>
 
-<h1>
+<h3>
 	<span>{index+1}</span> {item.name}
-</h1>
+</h3>

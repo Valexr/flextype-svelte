@@ -12,6 +12,5 @@
 	}
 </style>
 
-<td class="px-4 py-2">
-	<span>{index+1}</span> {item.name}
-</td>
+<td class="px-4 py-2">{index+1}</td>
+<td class="px-4 py-2">{item.name}</td>
