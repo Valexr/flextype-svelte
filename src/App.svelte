@@ -11,12 +11,12 @@
 
 	import { onMount } from 'svelte';
 
-	let entries;
-	onMount(async () => {
-		const response = await fetch('https://in-sign.ru/flextype-api.php');
-		const todo = await response.json();
-		entries = todo;
-	});
+	// let entries;
+	// onMount(async () => {
+	// 	const response = await fetch('https://in-sign.ru/flextype-api.php');
+	// 	const todo = await response.json();
+	// 	entries = todo;
+	// });
 
 	let myTodo = getTodo();
 	async function getTodo() {
@@ -37,6 +37,17 @@
         data = await response.json();
     });
 
+    import TableSort from './components/TableSort.svelte'
+	let items = []
+	const dataPromise = fetch(`https://node-hnapi.herokuapp.com/news?page=1`)
+		.then(r => r.json())
+		.then(data => {
+			items = data
+		});
+
+	import SortableListComponent from './components/SortableListComponent.svelte';
+	import SortableTableComponent from './components/SortableTableComponent.svelte';
+
 </script>
 
 <Tailwindcss />
@@ -49,6 +60,44 @@
 		<AdressBar />
 
 		<main class="main">
+			
+			<div class="overflow-auto md:p-4">
+				<h2>Sortable Table</h2>
+				<SortableTableComponent />
+			</div>
+
+			<div class="overflow-auto md:p-4">
+				<h2>Sortable List</h2>
+				<SortableListComponent />
+			</div>
+
+			<div class="overflow-auto md:p-4">
+				<h1>Hacker News</h1>
+
+				{#await dataPromise}
+				Loading...
+				{:then}
+				<TableSort items={items} class="table table-auto no-margin w-full overflow-auto">
+					<tr slot="thead">
+						<th data-sort="title">Title</th>
+						<th data-sort="user">User</th>
+						<th data-sort="domain">Domain</th>
+						<th data-sort="time" data-sort-initial="descending">Time ago</th>
+						<th data-sort="comments_count">Comments</th>
+					</tr>
+					<tr class="entry border h-12 px-4 py-2" slot="tbody" let:item={item}>
+						<td class="px-4"><a href="{item.url}">{item.title}</a></td>
+						<td>{item.user}</td>
+						<td>{item.domain}</td>
+						<td>{item.time_ago}</td>
+						<td>{item.comments_count}</td>
+					</tr>
+				</TableSort>
+				{:catch error}
+					<p style="color: red">{error.message}</p>
+				{/await}
+			</div>
+
 			<div class="overflow-auto md:p-4">
 				<Table />
 			</div>
@@ -57,7 +106,7 @@
 			<!-- <svg class="svg-ico">
 				<use xlink:href="feather-sprite.svg#activity" />
 			</svg> -->
-			<div class="p-4">
+			<!-- <div class="p-4">
 				{#if entries}
 					<ul>
 						{#each entries as entry, i}
@@ -70,7 +119,7 @@
 				{:else}
 					<p class="text-red-700">loading.....</p>
 				{/if}
-			</div>
+			</div> -->
 
 			<div class="p-4">
 				{#await myTodo}
