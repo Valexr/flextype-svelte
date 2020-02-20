@@ -28,7 +28,7 @@ function totalPagesChanged (e) {
  
 </style>
 
-<input bind:value="{filters.title.value}"/>
+<input placeholder="by title" bind:value="{filters.title.value}"/>
 
 <STable {data} {filters} {pageSize} {currentPage}
         class="table table-auto w-full"

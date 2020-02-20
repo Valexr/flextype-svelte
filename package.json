@@ -28,6 +28,7 @@
     "svelte-awesome": "*",
     "svelte-feather-icons": "*",
     "svelte-preprocess": "*",
+    "svelte-routing": "^1.4.0",
     "tailwindcss": "*",
     "yarn-upgrade-all": "*"
   },

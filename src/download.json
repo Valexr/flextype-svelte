@@ -1,1 +1,20 @@
-{"title":"Home","template":"default","fieldset":"default","menu_item_title":"Home","menu_item_url":"home","menu_item_target":"_self","menu_item_order":"1","uuid":"3d85291f-e2dd-4f96-8fd9-ecb797f11fdc","published_at":"18-02-2020 18:49","created_at":"18-02-2020 18:49","published_by":"121a4b29-0fad-42a5-b096-e91a008ebbf4","description":"","visibility":"visible","routable":true,"created_by":"121a4b29-0fad-42a5-b096-e91a008ebbf4","content":"<h1 style=\"text-align: center;\">Welcome!<\/h1>\r\n<p style=\"text-align: center;\" class=\"lead\">\r\n    Welcome to your new Flextype powered website.<br> Flextype is succesfully installed, you can start editing the content and customising your site in <a href=\".\/admin\">Admin panel<\/a>.\r\n<\/p>","modified_at":1582051769,"slug":"home"}
+{
+    "content": "<h1 style=\"text-align: center;\">Welcome!</h1>\r\n<p style=\"text-align: center;\" class=\"lead\">\r\n    Welcome to your new Flextype powered website.<br> Flextype is succesfully installed, you can start editing the content and customising your site in <a href=\"./admin\">Admin panel</a>.\r\n</p>",
+    "created_at": "20-02-2020 09:23",
+    "created_by": "a20e2868-18d0-418e-b910-4445de30d20e",
+    "description": "Description",
+    "fieldset": "default",
+    "menu_item_order": "1",
+    "menu_item_target": "_self",
+    "menu_item_title": "Home",
+    "menu_item_url": "home",
+    "modified_at": 1582190645,
+    "published_at": "20-02-2020 09:23",
+    "published_by": "a20e2868-18d0-418e-b910-4445de30d20e",
+    "routable": true,
+    "slug": "home",
+    "template": "default",
+    "title": "Home",
+    "uuid": "3d85291f-e2dd-4f96-8fd9-ecb797f11fdc",
+    "visibility": "visible"
+}
