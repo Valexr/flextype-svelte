@@ -69,7 +69,7 @@ onMount(() => {
 
 </script>
 
-<table class="{$$props.class}">
+<table class="{$$props.class}" {allowSelection}>
     <slot name="head"/>
     <slot name="body" {displayData}/>
 </table>

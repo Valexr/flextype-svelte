@@ -153,7 +153,7 @@ function lastPage () {
         {#if boundaryLinks}
         <li class:disabled="{currentPage === totalPages}" class="page-item">
             <a href="javascript:void(0)" aria-label="Previous" on:click="{lastPage}" class="page-link">
-                <span aria-hidden="true" v-html="lastText"></span>
+                <span aria-hidden="true">{@html lastText}</span>
             </a>
         </li>
         {/if}

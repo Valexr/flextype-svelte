@@ -1,8 +1,8 @@
 <script>
-	let text = 'Home';
-	import { onMount } from 'svelte';
+  let text = 'Home';
+  import { onMount } from 'svelte';
 
-  	let entries = {};
+  let entries = {};
 	onMount(async () => {
 		const response = await fetch('https://flextype.in-sign.ru/api/delivery/entries?id=home&token=27ee51ee1c8a35e41718a3a63f74b501');
 		const todo = await response.json();

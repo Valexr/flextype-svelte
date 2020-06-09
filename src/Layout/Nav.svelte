@@ -16,25 +16,27 @@
 
 	let navItems = [
 		{id: 0, href: '/', class: 'nav-logo', name: 'Flextype', icon: flextype, scale: 3},
-		{id: 1, href: 'entries', class: '', name: 'Entries', icon: faDatabase},
-		{id: 2, href: 'fieldsets', class: '', name: 'Fieldsets', icon: faListAlt},
-		{id: 3, href: 'themes', class: '', name: 'Themes', icon: faPalette},
-		{id: 4, href: 'snippets', class: '', name: 'Snippets', icon: faFileCode},
-		{id: 5, href: 'plugins', class: '', name: 'Plugins', icon: faPlug},
-		{id: 6, href: 'tools', class: '', name: 'Tools', icon: faToolbox},
-		{id: 7, href: 'settings', class: '', name: 'Settings', icon: faCog},
-		{id: 8, href: 'user ', class: 'nav-user', name: 'User', icon: faUserCircle},
+		{id: 1, href: '/entries', class: '', name: 'Entries', icon: faDatabase},
+		{id: 2, href: '/fieldsets', class: '', name: 'Fieldsets', icon: faListAlt},
+		{id: 3, href: '/themes', class: '', name: 'Themes', icon: faPalette},
+		{id: 4, href: '/snippets', class: '', name: 'Snippets', icon: faFileCode},
+		{id: 5, href: '/plugins', class: '', name: 'Plugins', icon: faPlug},
+		{id: 6, href: '/tools', class: '', name: 'Tools', icon: faToolbox},
+		{id: 7, href: '/settings', class: '', name: 'Settings', icon: faCog},
+		{id: 8, href: '/user ', class: 'nav-user', name: 'User', icon: faUserCircle},
 		];
 </script>
 
 <nav class="nav {customClass}">
-	{#each navItems as navItem, i}
-		<Link to="{ navItem.href }">
-			<span class="nav-item { navItem.class }" data-tooltip="{ navItem.name }">
-		  		<Icon data={ navItem.icon } scale={ navItem.scale }/>
-		  	</span>
-	  	</Link>
-  	{/each}
+	<ul>
+		{#each navItems as navItem, i}
+			<li class="nav-item { navItem.class }" data-tooltip="{ navItem.name }">
+				<Link to="{ navItem.href }">
+			  		<Icon data={ navItem.icon } scale={ navItem.scale }/>
+			  	</Link>
+			</li>
+	  	{/each}
+	</ul>
 </nav>
 
 <style type="text/scss">
@@ -62,11 +64,9 @@
 				}
 			}
 			&.active { @apply bg-gray-800 text-white; }
+			&[aria-current] { @apply bg-gray-800 text-white; }
 			&.nav-logo { @apply p-2; }
 			&.nav-user { @apply absolute inset-x-0 bottom-0; }
-		}
-		:global(a) { @apply text-gray-600 flex;
-			&[aria-current]{ @apply bg-gray-800 text-white; }
 		}
 	}
 </style>

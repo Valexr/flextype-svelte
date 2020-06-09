@@ -18,6 +18,7 @@ let filters = {
 let pageSize = 10
 let totalPages = 0
 let currentPage = 1
+let allowSelection = true
 
 function totalPagesChanged (e) {
   totalPages = e.detail
@@ -30,7 +31,7 @@ function totalPagesChanged (e) {
 
 <input placeholder="by title" bind:value="{filters.title.value}"/>
 
-<STable {data} {filters} {pageSize} {currentPage}
+<STable {data} {filters} {pageSize} {currentPage} {allowSelection}
         class="table table-auto w-full"
         selectedClass="table-info"
         on:totalPagesChanged="{totalPagesChanged}"

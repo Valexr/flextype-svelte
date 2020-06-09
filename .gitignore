@@ -2,3 +2,5 @@
 node_modules
 public
 tailwind.default.config.js
+yarn.lock
+yarn-error.log
